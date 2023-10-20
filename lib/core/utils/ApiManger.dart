@@ -3,14 +3,17 @@ import 'package:afktask/features/HomeScreen/data/models/addmodel/Addrequst.dart'
 import 'package:afktask/features/LoginScreen/data/models/loginresoponse.dart';
 import 'package:dio/dio.dart';
 import 'package:hive/hive.dart';
-import '../../constants.dart';
 import '../../features/HomeScreen/data/models/modelgetall/Data.dart';
 import '../../features/HomeScreen/data/models/modelgetall/Getallmodels.dart';
 import '../../features/LoginScreen/data/localdata/Localdata.dart';
 import 'addrequst_methods.dart';
 
 class Apimnger{
- Apimnger(this.dio);
+  static const String baseurl='https://back.afakyerp.com/API/PosForm/Add';
+  static const String klogiapi='https://back.afakyerp.com/API/User/Login';
+  static const String kgetall='https://back.afakyerp.com/API/PosForm/GetAll';
+
+  Apimnger(this.dio);
    Dio dio;
   Future<String?>   login(String username,String password) async {
     final response = await dio.post(klogiapi,data:{"userName": username,

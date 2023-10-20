@@ -36,7 +36,7 @@ class _WrapingitemsState extends State<Wrapingitems> {
         Row( crossAxisAlignment: CrossAxisAlignment.center ,
           children: [
             CustomDropdown(dropdawemitems: getallCubit.storesList!.map((e) => e.storeName!).toList(),
-              labal: 'Select Store Type',
+              labal: 'Select Store ',
               dropdawnid: 3,
             ),
             SizedBox(

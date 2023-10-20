@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                     SizedBox(height: 24.h),
                     Center(
                         child: TextButton(
-                      child: Text('Creat new acount!',
+                      child: Text('Create new acount',
                           style: TextStyle(color: Colors.white)),
                       onPressed: () {},
                     )),

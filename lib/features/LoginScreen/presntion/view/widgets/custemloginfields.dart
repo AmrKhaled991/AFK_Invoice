@@ -19,13 +19,13 @@ class custemloginfields extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          customlabel(label: 'Usrname'),
+          customlabel(label: 'Username'),
           customformfield(
             controller: usernamecontroler,
             'UserNam',
             validator: (value) {
               if (value == null || value.trim().isEmpty) {
-                return 'inter value';
+                return 'enter value';
               }
               return null;
             },
@@ -33,13 +33,13 @@ class custemloginfields extends StatelessWidget {
           customlabel(label: 'Password'),
           customformfield(
             controller: passwordconrlar,
-            'enter your Password',
+            'enter your password',
             validator: (value) {
               if (value == null || value.trim().isEmpty) {
                 return 'enter value';
               }
               if (value.length < 6) {
-                return 'password unvalid';
+                return 'password invalid';
               }
               return null;
             },
